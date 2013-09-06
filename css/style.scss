@@ -1,0 +1,147 @@
+/* CSS Document */
+/* a-nt.io + a-nt.cc */
+
+@import "reset";
+@import "mixin";
+@import "grid";
+
+
+/* SETUP */
+
+
+$backg: #fff;
+$mainc: #000;
+$subc: #ccc;
+$maxw: 1408px;
+
+
+/* GENERAL */
+		
+a, a:hover, a:visited { @include links(none,none,$mainc)}
+a:focus { -moz-outline-style: none; }
+
+img, img a { border:none; }
+
+body {
+	background:$backg;
+	color: $mainc;
+
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 17px;
+	line-height: 24px;
+}
+
+
+/* WRAPPER */
+
+#wrapper {
+	@include init(0px auto, 0px,0px, auto, relative);
+	width: 100%;
+	z-index: 1;
+}
+
+/* INTERFACE */
+
+.interface {
+
+	@include init(0px auto, 0px, 0px, auto, relative);
+
+	max-width: $maxw;
+	z-index: 1;
+}
+
+.fixed {
+	position: fixed;
+	overflow: auto;
+	width: 100%;
+	top: 64px;
+	max-width: $maxw;
+	z-index: 2;
+}
+
+.text {
+	position: fixed;
+	overflow: auto;
+	width: 100%;
+	top: 192px;
+	max-width: $maxw;
+	z-index: 0;
+	height: 100%;
+}
+
+
+#logo {
+	height: 2px;
+	background: $mainc;
+	width: 60%;
+	margin-left: 25%;
+	margin-top: -12px;
+	margin-right: 15%;
+}
+
+#menu {
+	width: 70%;
+	height: 40px;
+}
+#menu ul li {
+	padding-top: 0px;
+	padding-right: 24px;
+	display: inline;
+}
+
+.close a { color: $subc;}
+.copy { color: $subc; font-size: 15px; }
+.copy a { color: $subc; text-decoration: underline; }
+
+
+
+/* FOLIO AREA */
+
+.workspace {
+
+	@include workspace(0px auto, 0px, auto, relative);
+	
+	max-width: $maxw;
+	width: 100%;
+	img { 
+		width: 100%;
+	}
+}
+
+.title {
+	margin-top: -2px;
+}
+
+.workwrapper {
+	width: 100%;
+	height: 100%;
+	margin: 0px auto;
+	overflow: auto;
+}
+.description {
+	background: $backg;
+	margin-left: 9%;
+	margin-right: 9%;
+	margin-top: 9%;
+	margin-bottom: 9%;
+	width: 60%;
+	height: 60%;
+	position: absolute;
+}
+
+
+.gridbreaker { margin-top: 384px; margin-bottom: 384px; height: 1px; }
+.left {float: left; width: 16px; height: 1px; background: $mainc;}
+.right {float: right; width: 16px; height: 1px; background: $mainc;}
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1024px) {
+	.gridbreaker { margin-top: 256px; margin-bottom: 256px;}
+	.first { margin-top: 448px; margin-bottom: 448px;}
+	}
+
+@media only screen and (max-width: 480px) {
+	.gridbreaker { margin-top: 128px; margin-bottom: 128px;}
+	}

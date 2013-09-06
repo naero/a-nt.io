@@ -1,0 +1,335 @@
+/* CSS Document */
+/* a-nt.io + a-nt.cc */
+/* RESET */
+/* ----------------------------------------- */
+/* Global reset */
+/* Based upon 'reset.css' in the Yahoo! User Interface Library: http://developer.yahoo.com/yui */
+*, html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h5, h5, h6, pre, form, label, fieldset, input, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal; }
+
+ol, ul, li {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h5, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before, q:after {
+  content: ''; }
+
+/* Global reset-RESET */
+/* The below restores some sensible defaults */
+strong {
+  font-weight: bold; }
+
+em {
+  font-style: italic; }
+
+a img {
+  border: none; }
+
+/* Gets rid of IE's blue borders */
+/* SASS Mixins */
+/* a-nt.io + a-nt.cc */
+/* CSS Grid */
+/* a-nt.io + a-nt.cc */
+/*
+ Width: 1408px
+ # Columns : 22 
+ Column width: 64px
+ */
+.grid_1 {
+  width: 4.5%; }
+
+/* 64px */
+.grid_2 {
+  width: 9%; }
+
+/* 128px */
+.grid_3 {
+  width: 13.5%; }
+
+/* 192px */
+.grid_4 {
+  width: 18%; }
+
+/* 256px */
+.grid_5 {
+  width: 22%; }
+
+/* 320px */
+.grid_6 {
+  width: 27%; }
+
+/* 384px */
+.grid_7 {
+  width: 32%; }
+
+/* 448px */
+.grid_8 {
+  width: 38.5%; }
+
+/* 544px */
+.grid_9 {
+  width: 43%; }
+
+/* 608px */
+.grid_10 {
+  width: 47.5%; }
+
+/* 672px */
+.grid_11 {
+  width: 52%; }
+
+/* 736px */
+.grid_12 {
+  width: 57%; }
+
+/* 800px */
+.grid_13 {
+  width: 61.5%; }
+
+/* 864px */
+.grid_14 {
+  width: 66%; }
+
+/* 928px */
+.grid_15 {
+  width: 70.5%; }
+
+/* 992px */
+.grid_16 {
+  width: 75%; }
+
+/* 1056px */
+.grid_17 {
+  width: 80%; }
+
+/* 1120px */
+.grid_18 {
+  width: 84%; }
+
+/* 1184px */
+.grid_19 {
+  width: 88.5%; }
+
+/* 1248px */
+.grid_20 {
+  width: 93%; }
+
+/* 1312px */
+.grid_21 {
+  width: 97.5%; }
+
+/* 1376px */
+.grid_22 {
+  width: 100%; }
+
+/* 1408px */
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12
+.grid_13,
+.grid_14,
+.grid_15,
+.grid_16,
+.grid_17,
+.grid_18,
+.grid_19,
+.grid_20,
+.grid_21,
+.grid_22 {
+  margin: 0;
+  float: left;
+  display: block; }
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+
+.clearfix:after {
+  clear: both;
+  content: ' ';
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+
+* html .clearfix, *:first-child + html .clearfix {
+  zoom: 1; }
+
+/* SETUP */
+/* GENERAL */
+a, a:hover, a:visited {
+  text-decoration: none;
+  outline: none;
+  color: black; }
+
+a:focus {
+  -moz-outline-style: none; }
+
+img, img a {
+  border: none; }
+
+body {
+  background: white;
+  color: black;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 24px; }
+
+/* WRAPPER */
+#wrapper {
+  margin: 0px auto;
+  top: 0px;
+  left: 0px;
+  overflow: auto;
+  position: relative;
+  width: 100%;
+  z-index: 1; }
+
+/* INTERFACE */
+.interface {
+  margin: 0px auto;
+  top: 0px;
+  left: 0px;
+  overflow: auto;
+  position: relative;
+  max-width: 1408px;
+  z-index: 1; }
+
+.fixed {
+  position: fixed;
+  overflow: auto;
+  width: 100%;
+  top: 64px;
+  max-width: 1408px;
+  z-index: 2; }
+
+.text {
+  position: fixed;
+  overflow: auto;
+  width: 100%;
+  top: 192px;
+  max-width: 1408px;
+  z-index: 0;
+  height: 100%; }
+
+#logo {
+  height: 2px;
+  background: black;
+  width: 60%;
+  margin-left: 25%;
+  margin-top: -12px;
+  margin-right: 15%; }
+
+#menu {
+  width: 70%;
+  height: 40px; }
+
+#menu ul li {
+  padding-top: 0px;
+  padding-right: 24px;
+  display: inline; }
+
+.close a {
+  color: #cccccc; }
+
+.copy {
+  color: #cccccc;
+  font-size: 15px; }
+
+.copy a {
+  color: #cccccc;
+  text-decoration: underline; }
+
+/* FOLIO AREA */
+.workspace {
+  margin: 0px auto;
+  left: 0px;
+  overflow: auto;
+  position: relative;
+  max-width: 1408px;
+  width: 100%; }
+  .workspace img {
+    width: 100%; }
+
+.title {
+  margin-top: -2px; }
+
+.workwrapper {
+  width: 100%;
+  height: 100%;
+  margin: 0px auto;
+  overflow: auto; }
+
+.description {
+  background: white;
+  margin-left: 9%;
+  margin-right: 9%;
+  margin-top: 9%;
+  margin-bottom: 9%;
+  width: 60%;
+  height: 60%;
+  position: absolute; }
+
+.gridbreaker {
+  margin-top: 384px;
+  margin-bottom: 384px;
+  height: 1px; }
+
+.left {
+  float: left;
+  width: 16px;
+  height: 1px;
+  background: black; }
+
+.right {
+  float: right;
+  width: 16px;
+  height: 1px;
+  background: black; }
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 1024px) {
+  .gridbreaker {
+    margin-top: 256px;
+    margin-bottom: 256px; }
+
+  .first {
+    margin-top: 448px;
+    margin-bottom: 448px; } }
+@media only screen and (max-width: 480px) {
+  .gridbreaker {
+    margin-top: 128px;
+    margin-bottom: 128px; } }

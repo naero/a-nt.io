@@ -1,0 +1,25 @@
+/* SASS Mixins */
+/* a-nt.io + a-nt.cc */
+
+
+
+@mixin init($margin, $top, $left, $overflow, $position) {
+	margin: $margin;
+	top: $top;
+	left: $left;
+	overflow: $overflow;	
+	position: $position;
+}
+
+@mixin workspace($margin, $left, $overflow, $position){
+	margin: $margin;
+	left: $left;
+	overflow: $overflow;
+	position: $position;
+}
+
+@mixin links($text-decoration, $outline, $color) {
+	text-decoration: $text-decoration;
+	outline: $outline; 
+	color: $color;
+}
