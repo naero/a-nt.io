@@ -190,10 +190,15 @@ a img {
 
 /* SETUP */
 /* GENERAL */
-a, a:hover, a:visited {
+a, a:visited {
   text-decoration: none;
   outline: none;
   color: black; }
+
+a:hover {
+  text-decoration: none;
+  outline: none;
+  color: blue; }
 
 a:focus {
   -moz-outline-style: none; }
