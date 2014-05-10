@@ -18,3 +18,15 @@ q:before, q:after { content:''}
 strong { font-weight: bold }
 em { font-style: italic }
 a img { border:none } /* Gets rid of IE's blue borders */
+
+/* Prevent Bounce on OSX */
+html {
+height: 100%;
+width: 100;
+overflow: hidden;
+}
+body {
+height: 100%;
+width: 100;
+overflow: auto;
+}

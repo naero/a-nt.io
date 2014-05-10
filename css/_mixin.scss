@@ -1,5 +1,5 @@
 /* SASS Mixins */
-/* a-nt.io + a-nt.cc */
+/* a-nt.io */
 
 
 
@@ -7,7 +7,7 @@
 	margin: $margin;
 	top: $top;
 	left: $left;
-	overflow: $overflow;	
+	overflow: $overflow;
 	position: $position;
 }
 
@@ -20,6 +20,10 @@
 
 @mixin links($text-decoration, $outline, $color) {
 	text-decoration: $text-decoration;
-	outline: $outline; 
+	outline: $outline;
 	color: $color;
+}
+
+@mixin translatez ($degrees) {
+-webkit-transform: translatez($degrees);
 }

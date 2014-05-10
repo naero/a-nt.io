@@ -1,23 +1,24 @@
 /* CSS Document */
-/* a-nt.io + a-nt.cc */
+/* a-nt.io */
 
 @import "reset";
 @import "mixin";
 @import "grid";
+@import "adjustments";
 
 
 /* SETUP */
-
 
 $backg: #fff;
 $mainc: #000;
 $subc: #ccc;
 $hoverc: #00f;
-$maxw: 1408px;
+$maxw: 1440px;
+$minw: 540px;
 
 
 /* GENERAL */
-		
+
 a, a:visited { @include links(none,none,$mainc);}
 a:hover { @include links(none,none,$hoverc);}
 a:focus { -moz-outline-style: none; }
@@ -27,19 +28,17 @@ img, img a { border:none; }
 body {
 	background:$backg;
 	color: $mainc;
-
-	font-family: Helvetica, Arial, sans-serif;
-	font-size: 17px;
-	line-height: 24px;
+	font: 17px/24px Helvetica, Arial, sans-serif;
+	min-width: $minw;
 }
 
 
 /* WRAPPER */
 
 #wrapper {
-	@include init(0px auto, 0px,0px, auto, relative);
-	width: 100%;
-	z-index: 1;
+	@include init(0px auto, 0px,0px, auto, static);
+	z-index: 0;
+	min-width: $minw;
 }
 
 /* INTERFACE */
@@ -49,28 +48,27 @@ body {
 	@include init(0px auto, 0px, 0px, auto, relative);
 
 	max-width: $maxw;
-	z-index: 1;
+	margin-left: 0;
+
+	overflow: visible;
 }
 
 .fixed {
 	position: fixed;
-	overflow: auto;
 	width: 100%;
 	top: 64px;
 	max-width: $maxw;
-	z-index: 2;
+	z-index: 1;
 }
 
 .text {
-	position: fixed;
-	overflow: auto;
+	position: absolute;
+	overflow: visible;
 	width: 100%;
-	top: 192px;
 	max-width: $maxw;
-	z-index: 0;
-	height: 100%;
+	height: auto;
 }
-
+.about { p {max-width: 640px; }}
 
 #logo {
 	height: 2px;
@@ -83,7 +81,6 @@ body {
 
 #menu {
 	width: 70%;
-	height: 40px;
 }
 #menu ul li {
 	padding-top: 0px;
@@ -92,9 +89,19 @@ body {
 }
 
 .close a { color: $subc;}
-.copy { color: $subc; font-size: 15px; }
+.copy { color: $subc; font-size: 15px; p{ max-width:480px; padding-top: 32px; } }
 .copy a { color: $subc; text-decoration: underline; }
 
+
+#showabout {display:none ; padding-top: 192px;}
+#closeabout {display:block;}
+#showabout:target {display: block; }
+#clouseabout:target {display: none; }
+
+#showexternals {display:none ; padding-top: 192px;}
+#closeexternals {display:block;}
+#showexternals:target {display: block; }
+#clouseexternals:target {display: none; }
 
 
 /* FOLIO AREA */
@@ -102,39 +109,55 @@ body {
 .workspace {
 
 	@include workspace(0px auto, 0px, auto, relative);
-	
+	margin-left: 0px;
 	max-width: $maxw;
-	width: 100%;
-	img { 
+	min-width: $minw;
+
+	background-color: $backg;
+
+	img {
 		width: 100%;
 	}
 }
 
-.title {
-	margin-top: -2px;
-}
-
 .workwrapper {
-	width: 100%;
-	height: 100%;
-	margin: 0px auto;
-	overflow: auto;
+position: relative;
+
 }
-.description {
+.descriptionwrapper {
 	background: $backg;
-	margin-left: 9%;
-	margin-right: 9%;
-	margin-top: 9%;
-	margin-bottom: 9%;
-	width: 60%;
-	height: 60%;
+	width: auto;
+	margin: 0;
+	top: 14%; left: 14%; right: 14%; bottom: 14%;
 	position: absolute;
 }
 
+.gridlines {
+		.left {left: 7%; top: 50%; width: 14%; height: 1px; background: $mainc; position: absolute;}
+		.right {right: 7%; top: 50%; width: 14%; height: 1px; background: $mainc; position: absolute;}
+		.top {left: 50%; top: 7%; width: 1px; height: 14%; background: $mainc; position: absolute;}
+		.bottom {left: 50%; bottom: 7%; width: 1px; height: 14%; background: $mainc; position: absolute;}
+}
 
-.gridbreaker { margin-top: 384px; margin-bottom: 384px; height: 1px; }
-.left {float: left; width: 16px; height: 1px; background: $mainc;}
-.right {float: right; width: 16px; height: 1px; background: $mainc;}
+.description {
+	display: table;
+	width: 100%;
+	height: 100%;
+	p {
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+	}
+}
+
+
+.workwrapper:hover .descriptionwrapper, .workwrapper:hover .gridlines { display:none; } /* hide on hover */
+
+
+.gridbreaker { margin-top: 384px; margin-bottom: 384px; height: 1px;
+	.left {float: left; width: 16px; height: 1px; background: $mainc;}
+	.right {float: right; width: 16px; height: 1px; background: $mainc;}
+}
 
 
 /* MEDIA QUERIES */
@@ -147,3 +170,10 @@ body {
 @media only screen and (max-width: 480px) {
 	.gridbreaker { margin-top: 128px; margin-bottom: 128px;}
 	}
+
+/* RETINA SPECIFIC */
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+   /* Retina-specific stuff here */
+}
