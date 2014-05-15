@@ -29,7 +29,7 @@ body {
 	background:$backg;
 	color: $mainc;
 	font: 17px/24px Helvetica, Arial, sans-serif;
-	min-width: $minw;
+	width: 100%;
 }
 
 
@@ -38,7 +38,6 @@ body {
 #wrapper {
 	@include init(0px auto, 0px,0px, auto, static);
 	z-index: 0;
-	min-width: $minw;
 }
 
 /* INTERFACE */
