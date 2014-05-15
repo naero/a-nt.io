@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A—NT</title>
+    <meta charset='utf-8'>
+    <!-- /%meta{:name => "viewport", :content => "width=device-width, initial-scale=1"} -->
+    <link rel='stylesheet' href='css/style.css'>
+    
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  </head>
+  <body>
+    <div class='clearfix grid_20' id='wrapper'>
+      <!-- START -->
+      <!-- FIXED AREA -->
+      <div class='interface clearfix'>
+        <div class='fixed'>
+          <div class='grid_1'>
+            &nbsp;
+          </div>
+          <div class='grid_2'>
+            A
+            <div id='logo'>
+              &nbsp;
+            </div>
+          </div>
+          <div class='grid_3'>
+            NT
+          </div>
+          <div class='grid_14' id='menu'>
+            <ul>
+              <li><a href='#showabout'>About</a></li>
+              <li><a href='#showexternals'>Externals</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class='text' id='showabout'>
+          <div class='grid_3'>
+            &nbsp;
+          </div>
+          <div class='grid_2 close'><a href='#closeabout'>Close</a></div>
+          <div class='grid_14 about'>
+            <p>Anders Nærø Tangen</p>
+            <p>1987, living in Oslo</p>
+            <p>Donec sed odio dui. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna mollis euismod. Etiam porta sem malesuada magna mollis euismod.</p>
+            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Lorem end.</p>
+            <p>
+              +47 93415557 /<a href='#mail'>post@a-nt.io</a></p>
+          </div>
+          <div class='grid_1'>
+            &nbsp;
+          </div>
+          <div class='grid_6'>
+            &nbsp;
+          </div>
+          <section class='copy grid_11'>
+            <p>This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.</p>
+          </section>
+          <div class='grid_3'>
+            &nbsp;
+          </div>
+        </div>
+        <div class='text' id='showexternals'>
+          <div class='grid_3'>
+            &nbsp;
+          </div>
+          <div class='grid_2 close'><a href='#closeexternals'>Close</a></div>
+          <div class='grid_14 about'>
+            <p>test</p>
+          </div>
+        </div>
+      </div>
+      <!-- FOLIO AREA -->
+      <div class='gridbreaker first'>
+        <div class='left'>
+          &nbsp;
+        </div>
+        <div class='right'>
+          &nbsp;
+        </div>
+      </div>
+      <!-- 1301 -->
+      <div class='workspace'>
+        <div class='grid_1'>
+          &nbsp;
+        </div>
+        <div class='grid_2 title'>
+          1301
+        </div>
+        <div class='grid_14 wrk'>
+          <div class='workwrapper'>
+            <div class='descriptionwrapper'>
+              <section class='description'>
+                <p>A-NT 1301</p>
+                <p>Palindrome fractal</p>
+                <br>8000x8000 px</br>
+                <p>metal plate coating</p>
+              </section>
+            </div>
+            <div class='gridlines horizontal'>
+              <div class='left'>
+                &nbsp;
+              </div>
+              <div class='right'>
+                &nbsp;
+              </div>
+              <div class='top'>
+                &nbsp;
+              </div>
+              <div class='bottom'>
+                &nbsp;
+              </div>
+            </div>
+            <img src='wrk/1301.jpg'>
+          </div>
+        </div>
+        <div class='grid_3'>
+          &nbsp;
+        </div>
+      </div>
+      <div class='gridbreaker'>
+        <div class='left'>
+          &nbsp;
+        </div>
+        <div class='right'>
+          &nbsp;
+        </div>
+      </div>
+      <!-- 1303 -->
+      <div class='workspace'>
+        <div class='grid_1'>
+          &nbsp;
+        </div>
+        <div class='grid_2 title'>
+          1301
+        </div>
+        <div class='grid_14 wrk'>
+          <div class='workwrapper'>
+            <div class='descriptionwrapper'>
+              <section class='description'>
+                <p>A-NT 1301</p>
+                <p>Palindrome fractal</p>
+                <br>8000x8000 px</br>
+                <p>metal plate coating</p>
+              </section>
+            </div>
+            <div class='gridlines horizontal'>
+              <div class='left'>
+                &nbsp;
+              </div>
+              <div class='right'>
+                &nbsp;
+              </div>
+              <div class='top'>
+                &nbsp;
+              </div>
+              <div class='bottom'>
+                &nbsp;
+              </div>
+            </div>
+            <img src='wrk/1303.png'>
+          </div>
+        </div>
+        <div class='grid_3'>
+          &nbsp;
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
