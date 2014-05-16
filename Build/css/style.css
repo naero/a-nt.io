@@ -211,7 +211,7 @@ a, a:visited {
 a:hover {
   text-decoration: none;
   outline: none;
-  color: blue; }
+  color: #cccccc; }
 
 a:focus {
   -moz-outline-style: none; }
@@ -281,6 +281,9 @@ body {
 .close a {
   color: #cccccc; }
 
+.close a:hover {
+  color: black; }
+
 .copy {
   color: #cccccc;
   font-size: 15px; }
@@ -305,17 +308,17 @@ body {
 #clouseabout:target {
   display: none; }
 
-#showexternals {
+#showexternal {
   display: none;
   padding-top: 192px; }
 
-#closeexternals {
+#closeexternal {
   display: block; }
 
-#showexternals:target {
+#showexternal:target {
   display: block; }
 
-#clouseexternals:target {
+#clouseexternal:target {
   display: none; }
 
 /* FOLIO AREA */
