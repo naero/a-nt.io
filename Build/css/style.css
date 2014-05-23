@@ -211,7 +211,7 @@ a, a:visited {
 a:hover {
   text-decoration: none;
   outline: none;
-  color: blue; }
+  color: #cccccc; }
 
 a:focus {
   -moz-outline-style: none; }
@@ -223,7 +223,7 @@ body {
   background: white;
   color: black;
   font: 17px/24px Helvetica, Arial, sans-serif;
-  min-width: 540px; }
+  width: 100%; }
 
 /* WRAPPER */
 #wrapper {
@@ -232,8 +232,7 @@ body {
   left: 0px;
   overflow: auto;
   position: static;
-  z-index: 0;
-  min-width: 540px; }
+  z-index: 0; }
 
 /* INTERFACE */
 .interface {
@@ -282,6 +281,9 @@ body {
 .close a {
   color: #cccccc; }
 
+.close a:hover {
+  color: black; }
+
 .copy {
   color: #cccccc;
   font-size: 15px; }
@@ -306,17 +308,17 @@ body {
 #clouseabout:target {
   display: none; }
 
-#showexternals {
+#showexternal {
   display: none;
   padding-top: 192px; }
 
-#closeexternals {
+#closeexternal {
   display: block; }
 
-#showexternals:target {
+#showexternal:target {
   display: block; }
 
-#clouseexternals:target {
+#clouseexternal:target {
   display: none; }
 
 /* FOLIO AREA */

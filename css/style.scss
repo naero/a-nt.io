@@ -4,7 +4,7 @@
 @import "reset";
 @import "mixin";
 @import "grid";
-@import "adjustments";
+@import "tweak";
 
 
 /* SETUP */
@@ -12,7 +12,7 @@
 $backg: #fff;
 $mainc: #000;
 $subc: #ccc;
-$hoverc: #00f;
+$hoverc: #ccc;
 $maxw: 1440px;
 $minw: 540px;
 
@@ -29,7 +29,7 @@ body {
 	background:$backg;
 	color: $mainc;
 	font: 17px/24px Helvetica, Arial, sans-serif;
-	min-width: $minw;
+	width: 100%;
 }
 
 
@@ -38,7 +38,6 @@ body {
 #wrapper {
 	@include init(0px auto, 0px,0px, auto, static);
 	z-index: 0;
-	min-width: $minw;
 }
 
 /* INTERFACE */
@@ -68,7 +67,7 @@ body {
 	max-width: $maxw;
 	height: auto;
 }
-.about { p {max-width: 640px; }}
+.about { p {max-width: 640px;}}
 
 #logo {
 	height: 2px;
@@ -89,6 +88,7 @@ body {
 }
 
 .close a { color: $subc;}
+.close a:hover { color: $mainc; }
 .copy { color: $subc; font-size: 15px; p{ max-width:480px; padding-top: 32px; } }
 .copy a { color: $subc; text-decoration: underline; }
 
@@ -98,10 +98,10 @@ body {
 #showabout:target {display: block; }
 #clouseabout:target {display: none; }
 
-#showexternals {display:none ; padding-top: 192px;}
-#closeexternals {display:block;}
-#showexternals:target {display: block; }
-#clouseexternals:target {display: none; }
+#showexternal {display:none ; padding-top: 192px;}
+#closeexternal {display:block;}
+#showexternal:target {display: block; }
+#clouseexternal:target {display: none; }
 
 
 /* FOLIO AREA */
