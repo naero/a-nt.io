@@ -1,0 +1,420 @@
+/* CSS Document */
+/* a-nt.io */
+/* RESET */
+/* ----------------------------------------- */
+/* Global reset */
+/* Based upon 'reset.css' in the Yahoo! User Interface Library: http://developer.yahoo.com/yui */
+*, html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h5, h5, h6, pre, form, label, fieldset, input, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal; }
+
+ol, ul, li {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h5, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before, q:after {
+  content: ''; }
+
+/* Global reset-RESET */
+/* The below restores some sensible defaults */
+strong {
+  font-weight: bold; }
+
+em {
+  font-style: italic; }
+
+a img {
+  border: none; }
+
+/* Gets rid of IE's blue borders */
+/* Prevent Bounce on OSX */
+html {
+  height: 100%;
+  width: 100;
+  overflow: hidden; }
+
+body {
+  height: 100%;
+  width: 100;
+  overflow: auto; }
+
+/* SASS Mixins */
+/* a-nt.io */
+/* CSS Grid */
+/* a-nt.io */
+/*
+ Width: 1280px
+ # Columns : 20
+ Column width: 64px
+ */
+.grid_1 {
+  width: 5%; }
+
+/* 64px */
+.grid_2 {
+  width: 10%; }
+
+/* 128px */
+.grid_3 {
+  width: 15%; }
+
+/* 192px */
+.grid_4 {
+  width: 20%; }
+
+/* 256px */
+.grid_5 {
+  width: 25%; }
+
+/* 320px */
+.grid_6 {
+  width: 30%; }
+
+/* 384px */
+.grid_7 {
+  width: 35%; }
+
+/* 448px */
+.grid_8 {
+  width: 40%; }
+
+/* 512px */
+.grid_9 {
+  width: 45%; }
+
+/* 576px */
+.grid_10 {
+  width: 50%; }
+
+/* 640px */
+.grid_11 {
+  width: 55%; }
+
+/* 704px */
+.grid_12 {
+  width: 60%; }
+
+/* 768px */
+.grid_13 {
+  width: 65%; }
+
+/* 832px */
+.grid_14 {
+  width: 70%; }
+
+/* 896px */
+.grid_15 {
+  width: 75%; }
+
+/* 960px */
+.grid_16 {
+  width: 80%; }
+
+/* 1024px */
+.grid_17 {
+  width: 85%; }
+
+/* 1088px */
+.grid_18 {
+  width: 90%; }
+
+/* 1152px */
+.grid_19 {
+  width: 95%; }
+
+/* 1216px */
+.grid_20 {
+  width: 100%; }
+
+/* 1280px */
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12
+.grid_13,
+.grid_14,
+.grid_15,
+.grid_16,
+.grid_17,
+.grid_18,
+.grid_19,
+.grid_20 {
+  margin: 0;
+  float: left;
+  display: block; }
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+
+.clearfix:after {
+  clear: both;
+  content: ' ';
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+
+* html .clearfix, *:first-child + html .clearfix {
+  zoom: 1; }
+
+/* CSS Adjustments */
+/* a-nt.io */
+body, html {
+  -webkit-font-smoothing: antialiased; }
+
+.title {
+  margin-top: -5px; }
+
+.wrk {
+  margin-left: 1px;
+  position: relative; }
+
+/* SETUP */
+/* GENERAL */
+a, a:visited {
+  text-decoration: none;
+  outline: none;
+  color: black; }
+
+a:hover {
+  text-decoration: none;
+  outline: none;
+  color: blue; }
+
+a:focus {
+  -moz-outline-style: none; }
+
+img, img a {
+  border: none; }
+
+body {
+  background: white;
+  color: black;
+  font: 17px/24px Helvetica, Arial, sans-serif;
+  min-width: 540px; }
+
+/* WRAPPER */
+#wrapper {
+  margin: 0px auto;
+  top: 0px;
+  left: 0px;
+  overflow: auto;
+  position: static;
+  z-index: 0;
+  min-width: 540px; }
+
+/* INTERFACE */
+.interface {
+  margin: 0px auto;
+  top: 0px;
+  left: 0px;
+  overflow: auto;
+  position: relative;
+  max-width: 1440px;
+  margin-left: 0;
+  overflow: visible; }
+
+.fixed {
+  position: fixed;
+  width: 100%;
+  top: 64px;
+  max-width: 1440px;
+  z-index: 1; }
+
+.text {
+  position: absolute;
+  overflow: visible;
+  width: 100%;
+  max-width: 1440px;
+  height: auto; }
+
+.about p {
+  max-width: 640px; }
+
+#logo {
+  height: 2px;
+  background: black;
+  width: 60%;
+  margin-left: 25%;
+  margin-top: -12px;
+  margin-right: 15%; }
+
+#menu {
+  width: 70%; }
+
+#menu ul li {
+  padding-top: 0px;
+  padding-right: 24px;
+  display: inline; }
+
+.close a {
+  color: #cccccc; }
+
+.copy {
+  color: #cccccc;
+  font-size: 15px; }
+  .copy p {
+    max-width: 480px;
+    padding-top: 32px; }
+
+.copy a {
+  color: #cccccc;
+  text-decoration: underline; }
+
+#showabout {
+  display: none;
+  padding-top: 192px; }
+
+#closeabout {
+  display: block; }
+
+#showabout:target {
+  display: block; }
+
+#clouseabout:target {
+  display: none; }
+
+#showexternals {
+  display: none;
+  padding-top: 192px; }
+
+#closeexternals {
+  display: block; }
+
+#showexternals:target {
+  display: block; }
+
+#clouseexternals:target {
+  display: none; }
+
+/* FOLIO AREA */
+.workspace {
+  margin: 0px auto;
+  left: 0px;
+  overflow: auto;
+  position: relative;
+  margin-left: 0px;
+  max-width: 1440px;
+  min-width: 540px;
+  background-color: white; }
+  .workspace img {
+    width: 100%; }
+
+.workwrapper {
+  position: relative; }
+
+.descriptionwrapper {
+  background: white;
+  width: auto;
+  margin: 0;
+  top: 14%;
+  left: 14%;
+  right: 14%;
+  bottom: 14%;
+  position: absolute; }
+
+.gridlines .left {
+  left: 7%;
+  top: 50%;
+  width: 14%;
+  height: 1px;
+  background: black;
+  position: absolute; }
+.gridlines .right {
+  right: 7%;
+  top: 50%;
+  width: 14%;
+  height: 1px;
+  background: black;
+  position: absolute; }
+.gridlines .top {
+  left: 50%;
+  top: 7%;
+  width: 1px;
+  height: 14%;
+  background: black;
+  position: absolute; }
+.gridlines .bottom {
+  left: 50%;
+  bottom: 7%;
+  width: 1px;
+  height: 14%;
+  background: black;
+  position: absolute; }
+
+.description {
+  display: table;
+  width: 100%;
+  height: 100%; }
+  .description p {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle; }
+
+.workwrapper:hover .descriptionwrapper, .workwrapper:hover .gridlines {
+  display: none; }
+
+/* hide on hover */
+.gridbreaker {
+  margin-top: 384px;
+  margin-bottom: 384px;
+  height: 1px; }
+  .gridbreaker .left {
+    float: left;
+    width: 16px;
+    height: 1px;
+    background: black; }
+  .gridbreaker .right {
+    float: right;
+    width: 16px;
+    height: 1px;
+    background: black; }
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 1024px) {
+  .gridbreaker {
+    margin-top: 256px;
+    margin-bottom: 256px; }
+
+  .first {
+    margin-top: 448px;
+    margin-bottom: 448px; } }
+@media only screen and (max-width: 480px) {
+  .gridbreaker {
+    margin-top: 128px;
+    margin-bottom: 128px; } }
+/* RETINA SPECIFIC */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Retina-specific stuff here */ }
